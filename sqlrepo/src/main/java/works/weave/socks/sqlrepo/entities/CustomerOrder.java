@@ -2,7 +2,6 @@ package works.weave.socks.sqlrepo.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -16,10 +15,8 @@ import java.util.List;
 // curl http://localhost:8082/orders/search/customerId\?custId\=1
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-@Document
 public class CustomerOrder {
 
-    @Id
     private String id;
 
     private String customerId;
@@ -113,9 +110,9 @@ public class CustomerOrder {
         return items;
     }
 
-    public void setItems(Collection<Item> items) {
+    /*public void setItems(Collection<Item> items) {
         this.items = items;
-    }
+    }*/
 
     public void setItems(List<Item> items) {
         this.items = items;

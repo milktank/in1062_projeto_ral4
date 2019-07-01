@@ -10,7 +10,7 @@ import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import works.weave.socks.shipping.entities.Shipment;
+import works.weave.socks.sqlrepo.entities.CustomerOrder;
 
 @Configuration
 public class RabbitMqConfiguration
@@ -49,7 +49,7 @@ public class RabbitMqConfiguration
     public DefaultClassMapper classMapper()
     {
         DefaultClassMapper typeMapper = new DefaultClassMapper();
-        typeMapper.setDefaultType(Shipment.class);
+        typeMapper.setDefaultType(CustomerOrder.class);
         return typeMapper;
     }
 
@@ -60,7 +60,7 @@ public class RabbitMqConfiguration
 
     @Bean
     TopicExchange exchange() {
-        return new TopicExchange("shipping-task-exchange");
+        return new TopicExchange("sqlrepo-task-exchange");
     }
 
     @Bean

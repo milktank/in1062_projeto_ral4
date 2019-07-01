@@ -2,26 +2,20 @@ package works.weave.socks.sqlrepo.entities;
 
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Document
 public class Customer {
 
-    @Id
     private String id;
 
     private String firstName;
     private String lastName;
     private String username;
 
-    @DBRef(lazy = true)
     private List<Address> addresses = new ArrayList<>();
 
-    @DBRef(lazy = true)
     private List<Card> cards = new ArrayList<>();
 
     public Customer() {

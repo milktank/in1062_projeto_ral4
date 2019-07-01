@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import works.weave.socks.sqlrepo.entities.HealthCheck;
-import works.weave.socks.sqlrepo.entities.Shipment;
+import works.weave.socks.sqlrepo.entities.CustomerOrder;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -64,7 +64,7 @@ public class SQLRepoController {
                 }
             });
         } catch ( AmqpException e ) {
-            rabbitmq.setStatus("err");
+            rabbitmq.setStatus(e.getMessage());
         }
 
         healthChecks.add(rabbitmq);

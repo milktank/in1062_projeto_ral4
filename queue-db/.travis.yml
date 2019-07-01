@@ -6,7 +6,7 @@ jdk:
 - oraclejdk8
 install: true
 env:
-- GROUP=weaveworksdemos COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG REPO=queue-master;
+- GROUP=weaveworksdemos COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG REPO=queue-db;
 script:
 - set -e
 - "./scripts/build.sh;"

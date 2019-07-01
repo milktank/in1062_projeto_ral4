@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>works.weave.microservices-demo</groupId>
-    <artifactId>shipping</artifactId>
+    <artifactId>sqlrepo</artifactId>
     <packaging>jar</packaging>
 
-    <name>shipping</name>
-    <description>Shipping service for microservices-demo application</description>
+    <name>sqlrepo</name>
+    <description>Sqlrepo service for microservices-demo application</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -74,7 +74,7 @@
     </dependencies>
 
     <build>
-        <finalName>shipping</finalName>
+        <finalName>sqlrepo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -131,6 +131,21 @@
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.2.0</version>
+            </plugin>
+	    <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <fork>true</fork>
+                    <executable>javac</executable>
+                </configuration>
+	    </plugin>
+	    <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-jar-plugin</artifactId>
+            	<version>3.0.2</version>
             </plugin>
         </plugins>
     </build>

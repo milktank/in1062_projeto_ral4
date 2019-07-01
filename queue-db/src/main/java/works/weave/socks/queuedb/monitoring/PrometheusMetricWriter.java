@@ -1,4 +1,4 @@
-package works.weave.socks.queuemaster.monitoring;
+package works.weave.socks.queuedb.monitoring;
 
 import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.Counter;

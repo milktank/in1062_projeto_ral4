@@ -18,7 +18,7 @@ public class OrdersConfigurationProperties {
 
     //SQLREPO
     public URI getSqlRepoUri() {
-        return new ServiceUri(new Hostname("sqlrepo"), new Domain(domain), "/sqlrepo").toUri();
+        return new ServiceUri(new Hostname("sqlrepo"), new Domain(domain), "/save").toUri();
     }
 
     public void setDomain(String domain) {

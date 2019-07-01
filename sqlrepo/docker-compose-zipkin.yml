@@ -1,9 +1,8 @@
-version: '2'
 
 services:
-  shipping:
-    image: weaveworksdemos/shipping
-    hostname: shipping
+  sqlrepo:
+    image: sqlrepo
+    hostname: sqlrepo
     restart: always
     cap_drop:
       - all
@@ -17,7 +16,7 @@ services:
       - ZIPKIN_HOST=zipkin
       - ZIPKIN_ENABLED=true
     ports:
-      - "8080:80"
+      - "8880:80"
   zipkin:
     image: openzipkin/zipkin 
     hostname: zipkin

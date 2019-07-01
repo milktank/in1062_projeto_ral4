@@ -119,9 +119,9 @@ public class OrdersController {
 
             //SQLREPO
             //INCLUIR CHAMADA PARA SERVICO DE PERSISTENCIA
-            //Future<SQLRepo> sqlRepoFuture = asyncGetService.postResource(config.getSQLRepoUri(), new SQLRepo
-            //        (order), new ParameterizedTypeReference<SQLRepo>() {
-            //});
+            LOG.info("Send Order to SQLREPO");
+            Future<CustomerOrder> sqlRepoFuture = asyncGetService.postResource(config.getSqlRepoUri(), order, new ParameterizedTypeReference<CustomerOrder>() {
+            });
 
             return savedOrder;
         } catch (TimeoutException e) {

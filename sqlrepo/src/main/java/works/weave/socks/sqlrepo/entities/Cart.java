@@ -1,20 +1,14 @@
 package works.weave.socks.sqlrepo.entities;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document
 public class Cart {
-    @NotNull
     private String customerId;
-    @Id
     private String id;
-    @DBRef
     private List<Item> items = new ArrayList<>();
 
     public Cart(String customerId) {

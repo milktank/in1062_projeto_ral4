@@ -2,7 +2,7 @@
 [![](https://images.microbadger.com/badges/image/weaveworksdemos/shipping.svg)](http://microbadger.com/images/weaveworksdemos/shipping "Get your own image badge on microbadger.com")
 
 # shipping
-A microservices-demo service that provides shipping capabilities.
+A microservices-demo service that provides DB Relational capabilities.
 
 This build is built, tested and released by travis.
 
