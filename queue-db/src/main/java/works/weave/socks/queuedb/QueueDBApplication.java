@@ -120,7 +120,6 @@ public class QueueDBApplication {
 
     @Bean
     public MessageListenerAdapter messageListenerAdapter() {
-    	System.out.println("Teste123");
         return new MessageListenerAdapter(orderTaskHandler, jsonMessageConverter());
     }
 

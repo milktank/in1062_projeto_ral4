@@ -19,14 +19,17 @@ git clone https://github.com/milktank/in1062_projeto_ral4
 
 cd orders
 mvn -DskipTests package
+mv target/orders.jar docker/orders/
 docker build -t orders:1.0 docker/orders/
 
 cd sqlrepo
 mvn -DskipTests package
+mv target/sqlrepo.jar docker/sqlrepo/
 docker build -t sqlrepo:1.0 docker/sqlrepo/
 
 cd queue-db
 mvn -DskipTests package
+mv target/queue-db.jar docker/queue-db/
 docker build -t queue-db:1.0 docker/queue-db/
 
 Move docker-compose.yml to [microservices-demo_path]/deploy/docker-compose/
