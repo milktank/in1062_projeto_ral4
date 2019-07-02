@@ -22,15 +22,15 @@ mvn -DskipTests package <br />
 mv target/orders.jar docker/orders/ <br />
 docker build -t orders:1.0 docker/orders/ <br />
 
-cd sqlrepo
-mvn -DskipTests package
-mv target/sqlrepo.jar docker/sqlrepo/
-docker build -t sqlrepo:1.0 docker/sqlrepo/
+cd sqlrepo <br />
+mvn -DskipTests package <br />
+mv target/sqlrepo.jar docker/sqlrepo/ <br />
+docker build -t sqlrepo:1.0 docker/sqlrepo/ <br />
 
-cd queue-db
-mvn -DskipTests package
-mv target/queue-db.jar docker/queue-db/
-docker build -t queue-db:1.0 docker/queue-db/
+cd queue-db <br />
+mvn -DskipTests package <br />
+mv target/queue-db.jar docker/queue-db/ <br />
+docker build -t queue-db:1.0 docker/queue-db/ <br />
 
 Move docker-compose.yml to [microservices-demo_path]/deploy/docker-compose/
 
