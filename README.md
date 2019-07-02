@@ -17,10 +17,10 @@ cd microservices-demo
 
 git clone https://github.com/milktank/in1062_projeto_ral4
 
-cd orders
-mvn -DskipTests package
-mv target/orders.jar docker/orders/
-docker build -t orders:1.0 docker/orders/
+cd orders <br />
+mvn -DskipTests package <br />
+mv target/orders.jar docker/orders/ <br />
+docker build -t orders:1.0 docker/orders/ <br />
 
 cd sqlrepo
 mvn -DskipTests package
